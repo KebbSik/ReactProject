@@ -2,8 +2,15 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Button } from "@/components/ui/button";
-import { Grid, GridItem, Show, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Grid,
+  GridItem,
+  Show,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import DarkModeToggle from "./components/my/DarkMode/DarkModeToggle";
+import NavBar from "./components/my/NavBar";
 
 function App() {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
@@ -17,7 +24,7 @@ function App() {
         }}
       >
         <GridItem area="nav" bg="coral">
-          nav
+          <NavBar />
         </GridItem>
         <Show when={isLargeScreen}>
           <GridItem area="side" bg="gold">
