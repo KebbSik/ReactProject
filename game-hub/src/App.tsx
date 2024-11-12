@@ -23,7 +23,7 @@ function App() {
           lg: `"nav nav" "side main"`,
         }}
       >
-        <GridItem area="nav" bg="coral">
+        <GridItem area="nav">
           <NavBar />
         </GridItem>
         <Show when={isLargeScreen}>
