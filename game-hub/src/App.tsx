@@ -35,6 +35,7 @@ function App() {
           main
         </GridItem>
       </Grid>
+      {/* <DarkModeToggle /> */}
     </div>
   );
 }
