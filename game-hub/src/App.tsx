@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import DarkModeToggle from "./components/my/DarkMode/DarkModeToggle";
 import NavBar from "./components/my/NavBar";
+import GameGrid from "./components/my/GameGrid";
 
 function App() {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
@@ -31,8 +32,8 @@ function App() {
             side
           </GridItem>
         </Show>
-        <GridItem area="main" bg="dodgerblue">
-          main
+        <GridItem area="main">
+          <GameGrid />
         </GridItem>
       </Grid>
       {/* <DarkModeToggle /> */}
