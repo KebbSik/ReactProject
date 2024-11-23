@@ -12,9 +12,10 @@ interface Props {
 const GameCard = ({ game }: Props) => {
   return (
     <Card.Root
+      width="300px"
       borderRadius={10}
       overflow="hidden"
-      bg={{ base: "gray.50", _dark: "gray.800" }}
+      bg={{ base: "gray.200", _dark: "gray.800" }}
     >
       {/* <Card.Header>{game.name}</Card.Header> */}
       <Image src={getCroppedImageUrl(game.background_image)} />
