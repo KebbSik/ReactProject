@@ -39,7 +39,10 @@ function App() {
         </GridItem>
         <Show when={isLargeScreen}>
           <GridItem area="side" paddingX="5px">
-            <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+            <GenreList
+              selectedGenre={selectedGenre}
+              onSelectGenre={(genre) => setSelectedGenre(genre)}
+            />
           </GridItem>
         </Show>
         <GridItem area="main">
