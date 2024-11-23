@@ -62,6 +62,7 @@ export const ColorModeButton = React.forwardRef<
         size="sm"
         rounded="full"
         colorPalette="white"
+        // colorPalette={colorMode === "light" ? "white" : "yellow"}
         ref={ref}
         {...props}
         css={{

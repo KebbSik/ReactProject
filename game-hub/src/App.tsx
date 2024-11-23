@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Button } from "@/components/ui/button";
 import {
+  chakra,
   Grid,
   GridItem,
   Show,
@@ -16,9 +17,11 @@ function App() {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
 
   return (
-    <div>
+    <chakra.div
+      // colorPalette="gray"
+      bg={{ base: "gray.50", _dark: "gray.900" }} // with this i can easly manipulate clors in light and dark modes
+    >
       <Grid
-        // bg={{ base: "white", _dark: "yellow" }} // with this i can easly manipulate clors in light and dark modes
         templateAreas={{
           base: `"nav" "main"`,
           lg: `"nav nav" "side main"`,
@@ -36,7 +39,7 @@ function App() {
           <GameGrid />
         </GridItem>
       </Grid>
-    </div>
+    </chakra.div>
   );
 }
 
