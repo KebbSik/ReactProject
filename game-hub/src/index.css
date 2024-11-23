@@ -1,9 +1,10 @@
-body {
+/* body {
   background-color: white;
   color: black;
-}
+} */
 
 /* Dark mode styles */
+/* works only when background clor of body is white and font color is black */
 .dark-mode body {
   background-color: rgb(39, 42, 47);
   color: white;

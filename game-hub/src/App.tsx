@@ -9,7 +9,6 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import DarkModeToggle from "./components/my/DarkMode/DarkModeToggle";
 import NavBar from "./components/my/NavBar";
 import GameGrid from "./components/my/GameGrid";
 
@@ -19,6 +18,7 @@ function App() {
   return (
     <div>
       <Grid
+        // bg={{ base: "white", _dark: "yellow" }} // with this i can easly manipulate clors in light and dark modes
         templateAreas={{
           base: `"nav" "main"`,
           lg: `"nav nav" "side main"`,
@@ -36,7 +36,6 @@ function App() {
           <GameGrid />
         </GridItem>
       </Grid>
-      {/* <DarkModeToggle /> */}
     </div>
   );
 }
