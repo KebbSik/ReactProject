@@ -56,6 +56,11 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
               <Button
                 width="10rem"
                 fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                background={
+                  genre.id === selectedGenre?.id
+                    ? { base: "gray.200", _dark: "gray.800" }
+                    : ""
+                }
                 onClick={() => {
                   onSelectGenre(genre);
                   //   console.log(genre.name);
@@ -63,7 +68,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                 _hover={{
                   background: { base: "gray.200", _dark: "gray.800" },
                 }}
-                // fontSize="2xsm"
+                fontSize="sm"
                 variant="ghost"
                 // padding={0}
               >

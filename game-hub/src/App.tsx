@@ -14,6 +14,7 @@ import NavBar from "./components/my/NavBar";
 import GameGrid from "./components/my/GameGrid";
 import GenreList from "./components/my/GenreList";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./components/my/PlatformSelector";
 
 function App() {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
@@ -46,6 +47,7 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
+          <PlatformSelector />
           <GameGrid selectedGenre={selectedGenre} />
         </GridItem>
       </Grid>
