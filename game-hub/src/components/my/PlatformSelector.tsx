@@ -28,11 +28,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
           <FaChevronDown />
         </Button>
       </MenuTrigger>
-      <MenuContent
-        position="absolute"
-        top="123px"
-        left={{ base: "-10px", lg: "187px" }}
-      >
+      <MenuContent position="absolute">
         {data.map((platform) => (
           <MenuItem
             key={platform.id}

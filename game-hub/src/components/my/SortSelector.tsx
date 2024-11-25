@@ -26,11 +26,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
           OrderBy: {currentSortOrder?.label || "Relevance"} <FaChevronDown />
         </Button>
       </MenuTrigger>
-      <MenuContent
-        position="absolute"
-        top="123px"
-        left={{ base: "137px", lg: "336px" }}
-      >
+      <MenuContent position="absolute">
         {sortOrders.map((order) => (
           <MenuItem
             onClick={() => onSelectSortOrder(order.value)}
