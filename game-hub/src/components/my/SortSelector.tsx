@@ -10,7 +10,11 @@ const SortSelector = () => {
           OrderBy: Relevance <FaChevronDown />
         </Button>
       </MenuTrigger>
-      <MenuContent position="absolute">
+      <MenuContent
+        position="absolute"
+        top="123px"
+        left={{ base: "137px", lg: "336px" }}
+      >
         <MenuItem value="Relevance">Relevance</MenuItem>
         <MenuItem value="Date added">Date added</MenuItem>
         <MenuItem value="Name">Name</MenuItem>
