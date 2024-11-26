@@ -11,7 +11,6 @@ import {
   Link,
   List,
   Spinner,
-  Text,
 } from "@chakra-ui/react";
 
 interface Props {
@@ -40,9 +39,11 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   }
   return (
     <>
-      <Heading fontSize="2xl" mb="3">
-        Genres
-      </Heading>
+      <Center>
+        <Heading fontSize="2xl" mb="3">
+          Genres
+        </Heading>
+      </Center>
       <List.Root variant="plain">
         {data.map((genre) => (
           <List.Item
