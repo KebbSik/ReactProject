@@ -5,11 +5,15 @@ import DarkModeToggle from "./DarkMode/DarkModeToggle";
 import { ColorModeButton } from "../ui/color-mode";
 import SearchInput from "./SearchInput";
 
-const NavBar = () => {
+interface Props {
+  onSearch: (serchText: string) => void;
+}
+
+const NavBar = ({ onSearch }: Props) => {
   return (
     <HStack padding="10px">
       <Image src={logo} boxSize="60px" />
-      <SearchInput />
+      <SearchInput onSearch={onSearch} />
       {/* <DarkModeToggle /> */}
       <ColorModeButton />
     </HStack>

@@ -17,11 +17,13 @@ import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/my/PlatformSelector";
 import { Platform } from "./hooks/useGames";
 import SortSelector from "./components/my/SortSelector";
+import SearchInput from "./components/my/SearchInput";
 
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;
+  searchText: string;
 }
 
 function App() {
@@ -45,7 +47,11 @@ function App() {
         }}
       >
         <GridItem area="nav">
-          <NavBar />
+          <NavBar
+            onSearch={(searchText) =>
+              setGameQuery({ ...gameQuery, searchText })
+            }
+          />
         </GridItem>
         <Show when={isLargeScreen}>
           <GridItem area="side" paddingX="5px">
